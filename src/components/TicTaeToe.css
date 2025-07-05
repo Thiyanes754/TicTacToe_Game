@@ -1,0 +1,170 @@
+/* Main container */
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Title */
+.title {
+  margin-top: 40px;
+  color: white;
+  font-size: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.title span {
+  color: #26ffcb;
+  padding-left: 12px;
+}
+
+/* Reset button */
+.reset {
+  width: 160px;
+  height: 55px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 40px;
+  background: #1f3540;
+  font-size: 20px;
+  color: #26ffcb;
+  margin-top: 25px;
+  margin-bottom: 40px;
+  transition: all 0.2s ease;
+}
+
+.reset:hover {
+  background-color: #26ffcb;
+  color: #1f3540;
+  transform: scale(1.05);
+}
+
+/* Game board as Grid */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  width: fit-content;
+  margin: auto;
+}
+
+/* Boxes */
+.boxes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1f3540;
+  border: 3px solid #0f1b21;
+  cursor: pointer;
+  width: 130px;
+  height: 130px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.boxes:hover {
+  background-color: #263b4a;
+  transform: scale(1.04);
+}
+
+.boxes img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.2s ease;
+}
+
+/* Winner inline message */
+.winner-inline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  color: #26ffcb;
+  margin: 20px 0;
+  animation: popUp 0.4s ease-in-out;
+}
+
+.winner-icon {
+  width: 36px;
+  height: 36px;
+}
+
+/* Keyframe animation */
+@keyframes popUp {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Tablet view */
+@media (max-width: 768px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .boxes {
+    width: 100px;
+    height: 100px;
+  }
+
+  .boxes img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .reset {
+    width: 140px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .winner-inline {
+    font-size: 22px;
+  }
+
+  .winner-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+  .title {
+    font-size: 30px;
+  }
+
+  .boxes {
+    width: 85px;
+    height: 85px;
+  }
+
+  .boxes img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .reset {
+    width: 130px;
+    height: 45px;
+    font-size: 16px;
+  }
+
+  .winner-inline {
+    font-size: 20px;
+  }
+
+  .winner-icon {
+    width: 28px;
+    height: 28px;
+  }
+}
