@@ -19,7 +19,7 @@ A simple 2-player Tic Tac Toe game built using React. Players take turns placing
 - React.js
 - Vite
 - JavaScript (ES6)
-- CSS / Tailwind CSS (optional)
+- CSS
 
 ---
 
